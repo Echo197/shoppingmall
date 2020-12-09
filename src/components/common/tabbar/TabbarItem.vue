@@ -10,11 +10,11 @@
 export default {
   name: "TabbarItem",
   // 父传子
-  props:{
-    path:String,
-    activeColor:{
-      type:String,
-      default:'red'
+  props: {
+    path: String,
+    activeColor: {
+      type: String,
+      default: "red"
     }
   },
   data() {
@@ -25,15 +25,15 @@ export default {
   methods: {
     itemClick() {
       // console.log(this.path);
-      this.$router.replace(this.path)
-    },
+      this.$router.replace(this.path);
+    }
   },
-  computed:{
-    isActive(){
-      return this.$route.path.indexOf(this.path)!==-1
+  computed: {
+    isActive() {
+      return this.$route.path.indexOf(this.path) !== -1;
     },
-     activeStyle(){
-       return this.isActive?{color:this.activeColor}:{}
+    activeStyle() {
+      return this.isActive ? { color: this.activeColor } : {};
     }
   }
 };
