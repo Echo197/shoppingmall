@@ -5,31 +5,19 @@
       <div slot="center">购物街</div>
     </nav-bar>
     <!-- 轮播图 -->
-    <!-- 思路一 -->
-    <!-- <swiper :banners="banner"></swiper> -->
-    <!-- 思路二 -->
-    <swiper>
-      <swiper-item v-for="(item, index) in banner" :key="index">
-        <a :href="item.link">
-          <img :src="item.image" alt="" />
-        </a>
-      </swiper-item>
-    </swiper>
+    <home-swiper :banner="banner"></home-swiper>
   </div>
 </template>
 
 <script>
 import NavBar from "components/common/navbar/NavBar";
-import Swiper from "components/common/swiper/Swiper";
-import SwiperItem from "components/common/swiper/SwiperItem";
-// import { Swiper, SwiperItem } from "components/common/swiper";
+import homeSwiper from "./component/homeSwiper";
 import { getMultiData } from "network/api/home";
 export default {
   name: "home",
   components: {
     NavBar,
-    Swiper,
-    SwiperItem,
+    homeSwiper,
   },
   data() {
     return {

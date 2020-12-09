@@ -22,7 +22,7 @@
       <slot name="indicator" v-if="showIndicator && slideCount > 1">
         <div
           v-for="(item, index) in slideCount"
-          class="indi-itme"
+          class="indi-item"
           :key="index"
           :class="{ active: index === currentIndex - 1 }"
         ></div>
